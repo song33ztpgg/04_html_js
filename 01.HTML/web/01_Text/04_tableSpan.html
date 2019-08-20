@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>03 table span</title> 
+<style type="text/css">
+	table{ 
+		border :1px solid blue;
+	}
+	
+	tr{ 
+		border :1px solid black;
+	}
+	
+	th, td{ 
+		border : 1px solid red;
+	}
+</style>
+</head>
+<body> 
+<!-- 테이블의 셀 병합 -->
+<!-- 병합을 진행할 각각 td, th 의 시작태그에 
+clspan, rowspan 의 속성을 사용하여 셀 병합 적용 
+--> 
+
+<!-- 첫행이 해더이고 나머지는 일반 행인 
+    총4 x 4 
+--> 
+<!-- table>(tr>th{해더}*4)+(tr>td{$}*4)*3 -->
+<table>
+	<tr>
+		<th colspan="3">해더1</th>
+		<!-- <th>해더2</th> --> 
+		<!-- <th>해더3</th> -->
+		<th>해더4</th>
+	</tr>
+	<tr>
+		<td rowspan="2">1</td>
+		<!-- <td>2</td> -->
+		<td colspan="2">3</td>
+		<!-- <td>4</td> -->
+	</tr>
+	<tr>
+		<td>5</td>
+		<td rowspan="2">6</td>
+		<td colspan="2" rowspan="2">7</td>
+		<!-- <td>8</td> -->
+	</tr>
+	<tr>
+		<td>9</td>
+		<!-- <td>10</td> -->
+		<!-- <td>11</td> -->
+		<!-- <td>12</td>  -->
+	</tr>
+</table>
+</body>
+</html>

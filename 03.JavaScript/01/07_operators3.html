@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var number = 99; 
+	
+	document.write("<h3>논의 연산자</h3>");
+	document.write("<hr />");
+	document.write("90 &lt; "+ number + "&lt; 100인가? <br />");
+	document.write((number > 90 && number < 100) + "<br />");
+	document.write("<hr />");
+	
+	document.write(number + "는 3의 배수이거나 2의 배수인가 <br />");
+	document.write((number %3 == 0 || number % 2 == 0) + "<br />");
+	document.write("<h3>누적 연산자</h3>");
+	document.write("<hr />");
+	document.write(number + "+3 의 결과는" + (number += 3) + "<br />");
+	document.write(number + "-3 의 결과는" + (number -= 3) + "<br />");
+	document.write(number + "*3 의 결과는" + (number *= 3) + "<br />");
+	document.write(number + "/3 의 결과는" + (number /= 3) + "<br />");
+	document.write(number + "%3 의 결과는" + (number %= 3) + "<br />");
+	document.write("<hr />");
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

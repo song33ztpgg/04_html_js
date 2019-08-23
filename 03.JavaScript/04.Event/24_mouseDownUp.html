@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>24 이벤트 : mouseDown mouseUp</title>
+<script type="text/javascript">
+	//마우스 키 다운 이벤트 발생시 처리 담당 함수 
+	function myMouseDown() {
+		document.getElementById("cibtebts").style.color="red"
+	}
+	
+	function myMouseUp() {
+		document.getElementById("contets").style.color ="blue"
+	}
+	
+	//마우스 더블클릭시 이벤트 처리 담당 함수 
+	function myDbclick(){ 
+		document.getElementById("contets").style.color ="black"
+		
+	}
+	//마우스 키 없 이벤트 방생시 처리 담당 함수 
+	
+</script>
+</head>
+<body>
+	<h3>마우스 다운, 업 이벤트 </h3> 
+	<hr /> 
+	<div id="contets" onMouseDown="myMouseDown()" onmouseup="myMouseUp()" ondblclick="myDbclick()"> 
+		글자위에서 마우스 버튼을 누르면 빨간색 으로 변경 <br/> 
+		글자위에서 마우스 버튼을 누르고 때면 파간색 으로 변경 <br/>
+	</div>
+</body>
+</html>

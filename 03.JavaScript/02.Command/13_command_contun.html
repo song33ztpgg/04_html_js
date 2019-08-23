@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>13 continue, break</title>
+<script type="text/javascript">
+	document.write("<h3>continue 구문 </h3> ") 
+	document.write("continue")
+	document.write(" 이후 구문 무시 가장 가까운 반복구문의 사작으로 돌아감 <br / >")
+	document.write("<h3 />") 
+	
+	//0 ~ 10 사이의 홀수의 값 구하기 
+	sum = 0 
+	
+	for (idx = 1; idx <= 10; idx++) { 
+		if (idx % 2 == 1) { 
+			sum += idx
+		}
+	} 
+	
+	sum = 0 
+	
+	for (idx = 1; idx <= 10; idx++) { 
+		if (idx % 2 == 0)  
+			continue;
+			
+		sum += idx
+	} 
+	
+	document.write("홀수의 값은 ")
+	document.write(sum)
+	
+	
+	
+	document.write("<h3>break 구문 </h3> ") 
+	document.write("break")
+	document.write(" 가장 가까운 반복구문을 빠져나감 <br / >")
+	document.write("<h3 />") 
+	
+	sum = 0 
+	
+	for (idx = 0; idx <= 100; idx++) { 
+		
+		if (idx == 11) { 
+			break	
+		} else if (idx % 2 == 0) {
+			
+		} else if (idx % 2 == 1) {
+			sum += idx;
+		}
+		
+	} 
+	
+	document.write("홀수의 값은 ")
+	document.write(sum)
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

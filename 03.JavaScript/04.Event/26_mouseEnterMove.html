@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>26 이벤트 : mouseEnter, Move</title>
+<style type="text/css">
+	div { 
+		width: 300px; 
+		height : 300px;
+		padding: 20px; 
+		margin :5px;
+		background-color: lightgrey;
+	}
+</style>
+	
+<script type="text/javascript"> 
+	//마우스 엔터 이벤트 처리 함수 
+	function myMouseEnter() 
+	{ 
+		document.getElementById("contents").style.backgroundColor = "magenta";
+	} 
+	 
+	   
+	//마우스 무브 이벤트 처리 함수 
+	function myMouseMove(){ 
+		document.getElementById("contents2").style.backgroundColor = "cyan"; 
+	} 
+	
+	  
+	
+	//마우스 리브 이벤트 처리 함수
+	function myMouseLeave(){ 
+		document.getElementById("contents3").style.backgroundColor = "lightgrey"; 
+		
+	}
+	
+ 	//contents 아이디를 가진 div에
+	function myMouseLeave3(input){ 
+		consxole.log(input);
+ 		alert(input);
+		document.getElementById(input.id).style.backgroundColor = "lightgrey";
+	}
+ 	
+ 	function myMouseEnter3(intput) { 
+ 		consxole.log(input);
+ 		alert(input);
+		document.getElementById(input.id).style.backgroundColor = "lightgrey";
+ 	}
+	  
+	
+</script>
+</head>
+<body>
+	<h3>마우스 엔터 무브 이벤트</h3>  
+	<hr />  
+	<div id="contests" onMouseEnter="myMouseEnter()" onMouseMove="myMouseMove()"> 
+		이영역에 마우스가 들어오면 magenta <br/>
+		마우스가 떠나면 배경색이 lightgrey<br/>
+	</div>
+		
+	<div id="contests2" onmouseenter="myMouseMove();"> 
+		이영역에 마우스가 들어오면 magenta <br/>
+		마우스가 떠나면 배경색이 cyan <br/>
+	</div>
+	<div id="contests3"  onmouseleave="myMouseLeave();"> 
+		이영역에 마우스가 들어오면 magenta <br/>
+		마우스가 떠나면 배경색이 lightgrey <br/>
+	</div>
+	<div id="contests3" onMouseLeave="myMouseLeave();"> 
+		이영역에 마우스가 들어오면 magenta <br/>
+		마우스가 떠나면 배경색이 lightgrey <br/> 
+		
+	</div>
+</body>
+</html>

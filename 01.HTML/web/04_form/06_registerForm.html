@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>06 register</title>
+
+<link rel="stylesheet" type="text/css" href="./css/registerStyle.css">
+<!-- "web/04_form/css/style.css" -->
+
+<style type="text/css">
+	table{ 
+		border :1px solid black;
+	}
+	tr{ 
+		border :1px solid black;
+	}
+	th, td{ 
+		border : 1px solid black;
+	}
+</style>
+
+</head>
+<body>
+
+<table>
+
+	<tr>
+		<th colspan="4">가입폼</th>
+	</tr>
+
+	<tr>
+		
+		<td class="titles">이름*</td>
+		<td colspan="3" class="inputs">
+			<input type="text" name="userName" id="titles" size="10"/></input>
+		</td>
+	</tr>
+
+	<tr>
+		<td class="titles">아이디*</td>
+		<td colspan="3" class="inputs">
+			<input type="text" name="userID" id="titles"  size="10"/></input>
+		</td>
+	</tr>
+	
+	<tr>
+		<td class="titles">비밀번호*</td>
+		<td colspan="3"  class="inputs">
+			<input type="text" name="userPass" id="titles"  size="10"/></input>
+		</td>
+	</tr>
+	
+	<tr>
+		<td class="titles">비밀번호 확인*</td>
+		<td colspan="3"  class="inputs">
+			<input type="text" name="passConfirm" size="10"/></input>
+		</td>
+	</tr>
+	
+	<tr>
+		<td class="titles">성별</td>
+		<td colspan="3"  class="inputs">
+			<input type="radio" value="남" name="gender"/> 남
+			<input type="radio" value="여" name="gender"/> 여
+		</td>
+	</tr>
+	
+	<tr>
+		<td class="titles">연령대</td>
+		<td colspan="3"  class="inputs"> 
+		<select name="age">
+			<option>=연령대를 선택=</option>
+			<option value="10">10</option>
+			<option value="20">20</option>
+			<option value="30">30</option>
+			<option value="40">40</option>
+			<option value="50">50</option>
+			<option value="60">60</option>
+			<option value="70">70</option>
+			<option value="80">80</option>
+			<option value="80대 이상">80대 이상</option>
+		</select>
+		</td>
+	</tr>
+
+	<tr>
+		<td class="titles">취미</td>
+		<td colspan="3" class="inputs">
+			<input type="checkbox" name="hobby" value="sport" /> 스포츠
+			<input type="checkbox" name="hobby" value="supping]]" /> 서핑
+			<input type="checkbox" name="hobby" value="camping" /> 캠핑
+			<input type="checkbox" name="hobby" value="sing" /> 노래
+			<input type="checkbox" name="hobby" value="travel" /> 여행
+	</tr>
+	
+	<tr>
+		<td class="titles">이메일*</td>
+		<td colspan="3"  class="inputs">
+			<input type="text" name="emailID" size="10" /> @
+			<select name="email">
+				<option>==메일주소를 선택== </option>
+				<option value="naver.com">naver.com</option>
+				<option value="daum.net">daum.net</option>
+				<option value="gmail.com">gmail.com</option>
+				<option value="nate.net">nate.net</option>
+				<option value="yahoo.co.kr">yahoo.co.kr</option>
+		</select> 
+		</td>
+	</tr>
+	
+	<tr>
+		<td class="titles">전화번호</td>
+		<td colspan="3" class="inputs">
+			<select name="phone1"> 
+				<option>=번호 선택= </option>
+				<option value="010">010</option>
+				<option value="011">011</option>
+				<option value="070">070</option>
+				<option value="001">001</option> 
+		</select>
+		 -
+		<input type="text" name="phone2" size="4"/>
+		 -
+		<input type="text" name="phone3" size="4"/>
+	</tr>
+
+	<tr>
+		<td class="titles">주소</td>
+		<td colspan="3" class="inputs">
+			<select name="address">
+				<option>=주소선택= </option>
+				<option value="경기도">경기도</option>
+				<option value="평양">평양</option>
+				<option value="일본">일본</option>
+				<option value="우리집">우리집</option>
+			</select>
+	</tr>
+	
+	<tr>
+		<td class="titles">소개말</td>
+		<td colspan="3" class="inputs">
+			<textarea name="intro" cols="30" rows="10">
+		</textarea>
+	</tr>
+	
+	<tr>
+		<td colspan="4" class="inputs">
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="submit" value="가입하기"></input>
+ 			<input type="reset" value="초기화" />
+ 		</td>
+	</tr>
+</table>
+
+</body>
+</body>
+</html>

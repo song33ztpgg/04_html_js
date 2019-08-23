@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var input = 89; 
+	
+	//1. 비교값이 숫자인 경우 
+	document.write("<h3> switch 로 숫자 비교</h3>")
+	
+	switch (input % 2) { 
+	case 0: 
+		document.write("입력값: " + input + "은(는) 짝수입니다") 
+		break;
+	case 1: 
+		document.write("입력값: " + input + "은(는) 홀수입니다") 
+		break;
+	default : 
+		document.write("잘못된 입력입니다") 
+		break;
+	} 
+	
+	document.write("<hr />"); 
+	
+	//2. 비교값이 논리 값인 경우 
+	document.write("<h3>switch 로 논리값 비교</h3>"); 
+	
+	input = true;
+	
+	switch (input) { 
+	case true : 
+		document.write("입력값 " + input + "은 참입니다")
+		break; 
+	case false : 
+		document.write("입력값 " + input + "은 거짓입니다")
+		break;
+	}
+	
+	//3.비교값이 문자인 경우
+	document.write("<h3>switch 로 문자값 비교</h3>"); 
+	input = a;
+	
+	switch (input) { 
+	case "A": 
+		document.write("학점은 "  + input + "입니다.")
+		break; 
+	case "B": 
+		document.write("학점은 "  + input + "입니다.")
+		break
+	}
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

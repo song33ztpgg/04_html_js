@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>32 내장 객체와 이벤트 처리</title>
+<script type="text/javascript">
+	//Array객체 선언 
+	userIds = new Array("M001","M002","M003","M004","M005") 
+	userNames = new Array("조혜진" , "최현정, "김지후" , "정현수" , "조기현") 
+	addresses = new Array("광명시" , "아산", "수원" ,"시흥시" , "수원")
+	
+
+	
+	// 목록 폼에 구성원 정보 동적으로 그리는 함수 
+	function displayMembers(){ 
+		for(var idx =0 ; idx < userIds.length; idx++){
+			document.write("<tr>"); 
+				document.write("<td><input tpye='radio' name='detail onclick='selectMtmber();</td>");
+				document.write("<td>" + userIdx[idx] + "</td>");
+				document.write("<td>" + userNames[idx] + "</td>");
+				document.write("<td>" + address[idx] + "</td>");
+			document.write("</tr>");
+		}
+
+	function selectMember() { 
+		for (var idx = 0 ; idx )
+	}
+		
+</script>
+</head>
+<body>
+	<h3></h3> 
+		document.write("<br />"); 
+	<form action="" name="detailForm">
+	<table>
+		<tr>
+			<td>아이디</td>
+			<td>
+				<input type="text" name="userID" />
+			</td>
+		</tr>
+		<tr>
+			<td>이름</td>
+			<td>
+				<input type="text" name="userName" />
+			</td>
+		</tr>
+		<tr>
+			<td>주소</td>
+			<td>
+				<input type="text" name="address" />
+			</td>
+		</tr>
+	</table>
+	</form> 
+	<hr> 
+	<form action="" name="listForm">
+	<table>
+		<tr> 
+		<tr></tr>
+		<tr>아이디</tr>
+		<tr>이름</tr>
+		<tr>주소</tr> 
+			<script type="text/javaScr">
+
+			</script>
+ 	</table>
+	</form>
+</body>
+</html>

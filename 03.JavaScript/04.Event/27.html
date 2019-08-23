@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>27 이벤트 : form 이벤트</title> 
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<script type="text/javascript">
+	//값이 입력되는 폼을 받는 적연 변수  
+	var myForm;  
+	
+	
+	
+	//비밀번호 글자수가 5개 이상인지 체크 
+	function checkPassLength() {
+		
+		myForm = document.myForm;
+		
+		//객체 출력해서 확인 
+		console.log(myForm);
+		
+		//비밀번호 입력 인풋은 
+		//myForm > name 속성 값으로 접근 가능
+		var password = myForm,password; 
+		var passLength = password.value.length; 
+		
+		console.log("비번입력값 = " + password.value);
+		console.log("비번 길이 = " + password.value.length);
+		
+		// 글자의 길이가 5글자 이상이면 true, 
+		// 5 글자보다 짧으면 false 를 리넡할 변수 
+		var flag =  false; 
+
+		//비밀번호 경고가 출ㄹ력될 spm
+		var pwWarn = document.getElementByID("pwWarn");
+		
+		if(password == undefined || passLength < 5) {
+			pwWarn.interHTML ="비번길이 5글자 이상입니다";
+			password.focue();
+		} else {
+			
+			pwWarn.interHTML ="비번길이 5글자 이상입니다";
+			password.focue(); 
+			pwWarn.intnerHTML:"";
+			
+			flag = true;
+		}
+	}
+	
+	//비밀번호ㅡ 빌밀번호 확인 입력란의 값 일치 여부 판단 
+	function checkPassfirm(){
+		myForm =document.myForm; 
+		
+		var password = myForm.password
+		var password = myForm.passConfirm; 
+		
+		var flag = false; 
+		
+		if(password.value != passComfirm.value){
+			var pwConfirm = document.getElemenByID([wConfirm]); 
+			 pwConfirm.style.color = "red" 
+				 pwConfirm.innerHTML ="확인 값이 일치 하지 않습니다"; 
+			 passConfirm.focus();
+		} else 
+			
+		pwConfirm.style.color = " black"; 
+		pwConfirm.inner = "";
+		var flag = true; 
+	}
+	
+	//주소 선택 select의 onchnge d이벤트 핸들러 처리 함수 
+	funtion checkAddress(){ 
+		myForm = document.myForm; 
+		
+		//주소 선택 select 받기 
+		var = address = myForm.address; 
+		
+		var flag = false; 
+		
+		if (address.value.length == 0) {
+			alert("주소를 선택해"); 
+			address.focus(); 
+		} else { 
+			flaf = true;
+		}
+		
+	}
+/* 	onchange="checkAddress(); */
+	
+	
+	// 초기화 버튼 클릭시 확인하는 함수 
+	function resetMyForm(){ 
+
+		myForm = document.myForm;
+		var yes = confirm("입력값을 초기화 하겠습니까>")
+		
+		if(yes){
+			myForm.reset();
+		}
+	}
+
+	//폼 전송 이벤트 발생시 처리 함수 
+	function submitMyForm(){ 
+		var yes  = confirm("입력값을 전송하시겠습니까?") 
+		
+		var flag = fasle; 
+		if(yes){ 
+			flag = true;
+		} else {
+			
+		}
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</script>
+</head>
+<body>
+														<!-- return 이 true여야 값이 전달된다 --> 
+<form action="next.html" style="" name="myForm" onsubmit="return submitMyForm();">
+
+<table class="">
+	<tr>
+		<th colspan="2" class="w3-center">회 원 가 입</th>
+		<td></td>
+	</tr>
+	<tr>
+		<th>아이디*</th>
+		<td>
+			<input type="text" name="userid" required="required" />
+		</td>
+	</tr>
+	<tr>
+		<th>이름*</th>
+		<td>
+			<input type="text" name="username" required="required" />
+		</td>
+	</tr>
+	<tr>
+		<th>비밀번호*</th>
+		<td>
+			<input type="password" inblur="checkPoassLe " name="password" required="required" onblur="checkPassfirm"/> 
+			<span id ="pwWarn"></span> 
+			
+		</td>
+	</tr>
+	<tr>
+		<th>비밀번호 확인*</th>
+		<td>
+		<input type="password" name="passCinfirm" required="" /> 
+			<span> id = "</span> <!--  ㅇㅇㅇㅇㅇ -->
+		</td>
+	</tr>
+	<tr>
+		<th>이메일</th>
+		<td>
+			<input type="email" name="email" />
+		</td>
+	</tr>
+	<tr>
+		<th>성별 </th>
+		<td>
+			<!-- input[type="radio" name="" gender="" value="" id=""] -->
+			<input type="radio" name="gender" value="female" id="F" />여성
+			<input type="radio" name="gender" value="male" id="M" />남성
+		</td>
+	</tr>
+	<tr>
+		<th>취미</th>
+		<td>
+			<input type="checkbox" name="hobby" id="h1" value="sing" />노래
+			<input type="checkbox" name="hobby" id="h2" value="dance" />춤
+			<input type="checkbox" name="hobby" id="h3" value="racing" />사이클링
+			<input type="checkbox" name="hobby" id="h4" value="surfing" />서핑
+		</td>
+	</tr>
+	<tr>
+		<th>주소</th>
+		<td>
+			<select name="address" id="address" onchange="checkAddress();">
+				<option value="">주소를 선택 </option>
+				<option value="seoul">서울</option>
+				<option value="busan">뷰산</option>
+				<option value="daegu">대구</option>
+				<option value="asan">아산</option>
+			</select>
+		</td>
+	</tr>
+	<tr class="w3-center">
+		<td colsapn="2" > 
+			<input type="submit" value="전송" class="w3-btn w3-white w3-border w3-border-red w3-round-large/">
+			<input type="button" value="초기화" class="w3-bar-item w3-button w3-red" onclick="resetMyForm()"/>
+		</td>
+	</tr>
+</table>
+</form="mtForm">
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>14 지역 , 전역 변수</title>
+<script type="text/javascript">
+	
+	// 1. 전역 변수 : 이 문서 어디에서나 사용 가능 
+	//
+	//	(1) 함수 선언 외부에서 변수가 선언되면
+	//	(2) 함수선언 내부에서 선언되었을 때 
+	//	    var 키워드 없이 이름으로 바로 시작하면 
+	
+	// 전역 변수 선언 
+	global = 100; 
+	var global2 = 200;
+	
+	//변수 이름 앞에 var 키워드가 붙었어도 
+	//함수 외부 선언이므로 
+	//이 문서 어디에서나 사용 가능한 전역 변수
+	
+	//2.지역 변수 : 선언된 함수 내부에서만 사용 가능 
+	// 		      함수 내부에서 var 키워드와 함께 선언된 변수 
+	
+	// 자바 스크립트의 함수 선언 
+	//  function 함수 이름(매개변수) { 
+	//  ...	
+	//	}
+	
+	/* var z = 100;
+	
+	function add3(z) { 
+		//x, y는 매개변수 
+		//매개변수는 함수 내부에서만 사용이 가능 
+		
+		//함수 내부에서 지역변수 선언 : var 키워드 사용 
+		var result = 0; 
+		
+		//함수 내부에서 전역변수 선언 : var 키워드 미사용
+		sum = 0; 
+		result = z + z; 
+		document.write(x + " + " + y + " = " + result + "<br/>");
+	} */
+	
+	
+	
+	//두 개의 값을 입력받아서 
+	//더한 결과를 출력하는 함수 정으 ㅣ
+	function add1(x, y) { 
+		//x, y는 매개변수 
+		//매개변수는 함수 내부에서만 사용이 가능 
+		
+		//함수 내부에서 지역변수 선언 : var 키워드 사용 
+		var result = 0; 
+		
+		//함수 내부에서 전역변수 선언 : var 키워드 미사용
+		sum = 0; 
+		
+		result = x + y; 
+		sum = x + y; 
+		
+		document.write(x + " + " + y + " = " + result + "<br/>");
+		document.write(x + " + " + y + " = " + sum + "<br/>");
+	}
+	 
+	//2개의 값을 입력을 받아서 
+	// 더란 결과를 리턴하는 함수 
+	function add2(x, y) { 
+		return x + y;
+	}
+
+	//자바 스크립트의 함수는 
+	//return 구문의 존재 여부가 
+	// 함수 선언에 크게 문법적인 영향을 미치치 않는다. 
+	
+</script>
+</head>
+<body>
+<!--HEAD에서 선언된 함수 실행은 script 태그 내에서 호출 되어야함-->
+<script type="text/javascript">
+	document.write("<h3>자바 스크립트 함수 호출</h3>")
+	document.write("<hr />")
+	
+	//golbal1, gloval2, sum 전역변수
+	add1(40, global)
+	
+	document.write("sum= " + sum + "<br / >")
+	document.write("global1 = " + global + "<br / >")
+	document.write("global2 = " + global2 + "<br / >") 
+	document.write("<hr />")
+	
+	// 더하는 연산 함수에 문자값 전달
+	add1("hello", "java")
+	document.write("<hr />")
+	
+	//리넡하는 함수 add2 사용
+	document.write("add(4,5)=" + add2(4, 5)+ "<br />") 
+	
+	document.write("<hr />")
+
+	// 지연변수(매개변수인 x, y)를 
+	// 함수 외부에서 사용하려 할때 
+	document.write("<h3>매개변수, 지역변수의 잘못된</h3>")
+	/* 
+	document.write("x = " + x + "<br />")
+	document.write("y = " + y + "<br />")
+	document.write("result = " + result + "<br />")
+	document.write("sum = " + sum + "<br />") 
+	*/ 
+	document.write("") 
+	
+	
+</script>
+
+</body>
+</html>

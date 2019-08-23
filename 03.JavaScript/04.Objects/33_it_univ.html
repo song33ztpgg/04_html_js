@@ -6,7 +6,7 @@
 <script type="text/javascript">
 	//Array객체 선언 
 	userIds = new Array("M001","M002","M003","M004","M005") 
-	userNames = new Array("조혜진" , "최현정, "김지후" , "정현수" , "조기현") 
+	userNames = new Array("조혜진" , "최현정, "김지후" , "정현수" , "조기현"); 
 	addresses = new Array("광명시" , "아산", "수원" ,"시흥시" , "수원")
 	
 
@@ -21,7 +21,29 @@
 				document.write("<td>" + addresses[idx] + "</td>");
 			document.write("</tr>");
 		}
-
+	}
+	
+	
+	// 셀렉트 박스의 옵션을 동적으로 그리는 함수
+	funtion displayOptions(){ 
+		for(var idx =0 ; idx <userIds.length; idx++){
+			document.write("<option value'" + iserIds[idx] + "'>'" + userName[idx] + "</option>")
+			//<option value ='M001'>조해진
+		}
+		
+	}
+	
+	//구성원 이름을 선택하는 셀렉트 박스의 
+	//onchange 이벤트 핸들러 처리 함수
+	function searchMember(){ 
+		for (var idx = 0 ; idx < userIds.length; idx++) { 
+			document.deta			
+		}
+	}
+		
+		
+		
+		
 	function selectMember() { 
 		for (var idx = 0 ; idx )
 	}
@@ -65,6 +87,17 @@
 
 			</script>
  	</table>
+	</form>
+	
+	
+	<!-- 이름을 선택하는 셀렉트 박스 --> 
+	<hr> 
+	<form action="" name="searchForm"> 
+		구성원 검색 : 
+		<select name="selectId" id="" onchage="searchMember">
+			<option value= ""> 구성원선택 </option> 
+			<sc
+		</select>
 	</form>
 </body>
 </html>
